@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Estilos globales */
+body {
+  background-color: #1e1e2f;  /* Fondo oscuro */
+  color: #f0f0f0;             /* Texto claro */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.app {
+  margin-top: 50px;
+  width: 400px;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Estilo de la caja de entrada */
+.task-input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.task-input input {
+  width: 70%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #2b2b3a;
+  color: #f0f0f0;
+  border: 1px solid #4a4a5e;
+  border-radius: 5px;
+}
+
+.task-input input::placeholder {
+  color: #b3b3b3;
+}
+
+.task-input button {
+  width: 25%;
+  padding: 10px;
+  background-color: #4a90e2;  /* Botón azul oscuro */
   color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.task-input button:hover {
+  background-color: #357abf;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Lista de tareas */
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Estilo de las tarjetas (versión oscura) */
+.task-list li {
+  background-color: #2b2b3a;  /* Fondo oscuro para las tareas */
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.task-list li.completed {
+  background-color: #394053;  /* Fondo más claro para tareas completadas */
+}
+
+.task-list li span {
+  font-size: 16px;
+  cursor: pointer;
+  flex-grow: 1;
+  margin-right: 10px;
+  color: #f0f0f0;
+}
+
+/* Botón para eliminar tareas */
+.task-list li button {
+  background-color: #d6903f;  /* Botón de eliminación rojo */
+  border: none;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-list li button:hover {
+  background-color: #fccd76;
+}
+
+/* Cambio de estilo al completar una tarea */
+.task-list li.completed span {
+  text-decoration: line-through;
+  color: #b3b3b3;  /* Texto gris claro para tareas completadas */
 }
