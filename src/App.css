@@ -48,7 +48,7 @@ h1 {
 .task-input button {
   width: 25%;
   padding: 10px;
-  background-color: #4a90e2;  /* Botón azul oscuro */
+  background-color: #f09732;  /* Botón azul oscuro */
   color: white;
   border: none;
   border-radius: 5px;
@@ -94,7 +94,7 @@ h1 {
 
 /* Botón para eliminar tareas */
 .task-list li button {
-  background-color: #d6903f;  /* Botón de eliminación rojo */
+  background-color: #f09732;  /* Botón de eliminación rojo */
   border: none;
   color: white;
   padding: 8px;
