@@ -54,6 +54,7 @@ h1 {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .task-input button:hover {
